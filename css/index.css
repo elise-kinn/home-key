@@ -1,0 +1,426 @@
+*{
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+    margin: 0; 
+    box-sizing: border-box;
+    /* border : 1px black solid; */
+}
+
+:root{
+    --black:#000; 
+    --red:#f60303; 
+    --white:#fff; 
+    --grey:#c1c1c1; 
+    --lightgrey:#f1f1f1; 
+    --open: "Open Sans", sans-serif;
+}
+
+a{
+    cursor : pointer
+}
+
+#hidden{
+    display: none;
+}
+
+header{
+    max-width: 1440px;
+    margin : auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width : 180px
+}
+
+#logo-link{
+    padding-top : 10px;
+    padding-bottom: 15px;
+}
+
+nav{
+    padding-bottom: 28.73px;
+}
+
+nav > ul{
+    display: flex;
+    gap : 50px;
+    padding: 0;
+}
+
+nav li{
+    padding-top : 50px;
+    border-top: 1px solid transparent;
+}
+
+nav a{
+    padding : 0 15px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover{
+    padding-top : 50px;
+    border-top: 1px solid var(--red);
+    color : var(--red)
+}
+
+h2, h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+p{
+    font-size : 16px
+}
+
+#section-1{
+    display : flex;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width : 1470px;
+    height : 348px;
+}
+
+form{
+    display: flex;
+}
+
+input{
+    border : 1px var(--grey) solid;
+    font-weight:400 ;
+    outline: none;
+}
+
+#search-btn{
+    border-radius: 0 7px 7px 0;
+    padding: 0 15px;
+    border : 0;
+    font-weight: 600;
+    cursor : pointer;
+    transition: all 0.2s ease;
+}
+
+#search-btn:hover{
+    opacity : 0.7
+}
+
+.red-background{
+    background-color: var(--red);
+    color : var(--white)
+}
+
+#icone-form{
+    width : 38px;
+    height: 34px;
+    border-radius: 7px 0 0 7px;
+    padding-left: 13px;
+    padding-top: 5px;
+}
+
+#filters h2{
+  font-size: 18px;  
+}
+
+#filters{
+    display: flex;
+    gap : 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn{
+    border-radius: 12px;
+    border : 1px var(--red) solid;
+    background-color: var(--white);
+    height: 40px;
+    padding : 0 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor : pointer;
+
+}
+
+.filter-btn:hover .red-icone{
+    color : var(--white);
+}
+
+.filter-btn:hover{
+    background-color: var(--red);
+    color : var(--white)
+}
+
+.red-icone{
+    padding-right: 5px;
+    color: var(--red);
+    transition: all 0.2s ease;
+}
+
+
+.recommanded, .popular{
+    color : var(--white);
+    background-color: var(--red);
+    border-radius: 4px;
+    padding : 5px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+}
+
+.recommanded{
+    top: 10px;
+    right: 9px;
+    width: 110px;
+}
+
+.popular{
+    top: 10px;
+    left: 5px;
+    height: 28px;
+}
+
+#section-accomodation, #section-discover{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1440px;
+    gap : 30px;
+    padding: 0 15px;
+    margin : 0 auto
+}
+
+#accomodation-madrid p{
+    transition: all 0.2s ease;
+}
+
+#learn-more:hover, footer a:hover{
+    color: var(--red);
+}
+
+#learn-more{
+    font-weight: 700;
+}
+
+#section-discover{
+    flex-direction: column;
+}
+
+.large-container{
+    background-color: var(--lightgrey);
+    border-radius: 12px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding : 40px
+}
+
+.medium-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 15px;
+}
+
+.small-container{
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px var(--grey);
+    padding: 4px;
+    flex : 1 0 27%;
+    position: relative;
+}
+
+.discover-container{
+    flex : 1 0 20%
+}
+
+#accomodation-madrid .city-image{
+    height: 160px;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    transition : transform 0.2s ease;
+    object-fit : cover
+}
+
+.small-container:hover .city-image, .small-container:hover .discover-img, .small-discover-container:hover .discover-img{
+    transform: scale(1.01);
+    filter: grayscale(0.7);
+}
+
+#popular-madrid .city-image{
+    height: 160px;
+    border-radius:12px 0 0 12px;
+    width: 30%;
+    object-fit: cover;
+    transition : transform 0.2s ease;
+}
+
+#popular-madrid .small-container{
+    display: flex;
+    width : 334.06px;
+}
+
+#popular-madrid .medium-container{
+    flex-direction: column;
+}
+
+#popular-madrid .large-container{
+    padding : 40px 40px 92px 40px
+}
+
+.small-container > h3{
+    font-size : 16px;
+    margin-bottom: 4px;
+}
+
+.info-popular{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left : 15px
+}
+
+.stars{
+    margin-top : 17px
+}
+
+.small-container>p, .small-container>h3{
+    margin-left: 10px;
+}
+
+#accomodation-madrid >p{
+    font-weight: 700;
+}
+
+#section-discover{
+    padding-top : 35px;
+    padding-bottom : 35px;
+}
+
+#discover-container{
+    display: flex;
+    justify-content: center;
+    gap : 40px
+}
+
+#discover-container h3{
+    text-align: center;
+    padding-top : 8px;
+    padding-bottom : 12px;
+
+}
+
+.small-discover-container{
+    background-color: var(--white);
+    box-shadow: 0 5px 100px #00000040;
+    border-radius:12px;
+    max-width: 330px;
+
+
+}
+
+.discover-img{
+    width: 100%;
+    height : 380px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition : transform 0.2s ease;
+}
+
+footer, section{
+    max-width: 1440px;
+    margin : auto;
+    padding: 0 15px;
+}
+
+#background-footer{
+    display: flex;
+    justify-content:flex-start;
+    background-color: var(--lightgrey);
+    padding: 40px
+}
+
+.footer-parts{
+    flex : 1
+}
+
+footer li, footer>p{
+    font-size : 16px; 
+    margin-top : 20px;
+}
+
+footer h2{
+    font-size : 18px;
+    text-indent: 40px;
+}
+
+footer > p{
+    text-align: center;
+    margin-bottom : 25px
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color : var(--black)
+}
+
+
+
+@media (max-width: 1240px){ /*tablette*/
+    #section-accomodation{
+        flex-direction: column;
+    }
+
+    #popular-madrid .small-container{
+        width : 100%;
+    }
+
+    #popular-madrid .city-image{
+        height : 180px
+    }
+
+    #discover-container{
+        flex-wrap: wrap;
+        padding : 0 15px;
+    }
+
+    .small-discover-container{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767px){/*mobile*/
+    header{
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    #background-footer {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .medium-container{
+        flex-direction: column;
+    }
+
+    input{
+        width : 100%
+    }
+
+    #hidden{
+        display: block;
+    }
+
+    #desktop{
+        display: none;
+    }
+
+    #section-accomodation{
+        flex-direction: column-reverse;
+    }
+
+}
